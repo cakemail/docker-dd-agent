@@ -22,6 +22,8 @@ instances:
       # Keep it false if you have old dashboard using the old tag names. Default: false.
       new_tag_names: true
 
+      max_containers: 100
+
       # Tag metrics with the command running inside the container.
       #tag_by_command: false
 
@@ -56,12 +58,12 @@ instances:
 
       # Create events whenever a container status change.
       #
-      #collect_events: true
+      collect_events: true
 
       # Collect disk usage per container with docker.disk.size metric.
       # Warning: Some bugs in Docker (especially Docker 1.2) can break it, use with caution.
       #
-      #collect_container_size: false
+      collect_container_size: true
 
       # Collect uncommon metrics from cgroups.
       # Collect all the available cgroups metrics. All the relevant metrics are collected by default.
